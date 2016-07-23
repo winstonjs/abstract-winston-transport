@@ -17,5 +17,7 @@
 module.exports = function (name, Transport, options) {
   describe(name + ' transport (abstract test suite)', function () {
     require('./log')(name, Transport, options);
+    require('./stream')(name, Transport, options);
+    require('./query')(name, Transport, options);
   });
 };
