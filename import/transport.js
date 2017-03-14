@@ -1,3 +1,8 @@
+//
+// Imported from winston@2
+// test/transport/transport.js
+//
+
 var assert = require('assert'),
     winston = require('../../lib/winston'),
     helpers = require('../helpers');
