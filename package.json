@@ -1,0 +1,26 @@
+{
+  "name": "abstract-winston-transport",
+  "version": "0.0.0",
+  "description": "An abstract test suite for winston inspired by abstract-blob-store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:winstonjs/abstract-winston-transport.git"
+  },
+  "keywords": [
+    "winston",
+    "transport"
+  ],
+  "author": "Charlie Robbins <charlie.robbins@gmail.com>",
+  "contributors": [
+    "Jarrett Cruger <jcrugzz@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/winstonjs/abstract-winston-transport/issues"
+  },
+  "homepage": "https://github.com/winstonjs/abstract-winston-transport#readme"
+}
