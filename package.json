@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/winstonjs/abstract-winston-transport/issues"
   },
-  "homepage": "https://github.com/winstonjs/abstract-winston-transport#readme"
+  "homepage": "https://github.com/winstonjs/abstract-winston-transport#readme",
+  "devDependencies": {
+    "assume": "^1.4.1"
+  }
 }
