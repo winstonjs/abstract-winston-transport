@@ -12,12 +12,17 @@
  *                                      `new Transport(options())`.
  *                                      If parameter left empty defaults to {}.
  */
-module.exports = function (name, Transport, options) {
+module.exports = function (options) {
+  if (!options || !options.name || !options.Transport) {
+    throw new Error('name and Transport are required options');
+  }
+
+  var name = options.name;
   describe(name + ' transport (abstract-winston-tranport)', function () {
-    require('./log')(name, Transport, options);
+    require('./log')(options);
     ['stream', 'query'].forEach(function (suite) {
       if (options[suite]) {
-        require('./' + suite)(name, Transport, options);
+        require('./' + suite)(options);
       }
     });
   });
