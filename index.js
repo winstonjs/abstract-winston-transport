@@ -13,7 +13,7 @@
  *                                      If parameter left empty defaults to {}.
  */
 module.exports = function (name, Transport, options) {
-  describe(name + ' transport (abstract test suite)', function () {
+  describe(name + ' transport (abstract-winston-tranport)', function () {
     require('./log')(name, Transport, options);
     ['stream', 'query'].forEach(function (suite) {
       if (options[suite]) {

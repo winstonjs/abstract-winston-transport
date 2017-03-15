@@ -25,5 +25,8 @@
   "homepage": "https://github.com/winstonjs/abstract-winston-transport#readme",
   "devDependencies": {
     "assume": "^1.4.1"
+  },
+  "dependencies": {
+    "diagnostics": "^1.1.0"
   }
 }
