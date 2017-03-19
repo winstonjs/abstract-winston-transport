@@ -1,8 +1,10 @@
-//
-// Imported from winston@2
-// test/helpers.js
-//
-
+/*
+ * helpers.js: Imported from winston@2 `test/helpers.js`
+ *
+ * (C) 2010 Charlie Robbins
+ * MIT LICENSE
+ *
+ */
 helpers.assertFailedTransport = function (transport) {
   return {
     topic: function () {

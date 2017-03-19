@@ -1,7 +1,10 @@
-//
-// Imported from winston@2
-// test/transport/transport.js
-//
+/*
+ * transport.js: Imported from winston@2 `test/transport/transport.js`
+ *
+ * (C) 2010 Charlie Robbins
+ * MIT LICENSE
+ *
+ */
 
 var assert = require('assert'),
     winston = require('../../lib/winston'),
