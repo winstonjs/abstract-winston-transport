@@ -9,7 +9,11 @@ module.exports = function (options) {
   var instance;
 
   beforeEach(function () {
-    instance = new Transport(construct);
+    var create = typeof construct === 'function'
+      ? construct()
+      : construct;
+
+    instance = new Transport(create);
   });
 
   // TODO How to assert that error event is thrown? How to make a transport fail?
