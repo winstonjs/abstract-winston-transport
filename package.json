@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "An abstract test suite for winston inspired by abstract-blob-store",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:winstonjs/abstract-winston-transport.git"
