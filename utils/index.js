@@ -15,6 +15,27 @@ exports.logFor = function logFor(count, done) {
 };
 
 //
+// Helper function that creates `opts.count` infos repeating over the
+// `opts.levels` in order.
+//
+exports.infosFor = function infosFor(opts) {
+  const { count, levels } = opts;
+  const infos = [];
+
+  for (var i = 0; i < count; i++) {
+    infos.push.apply(infos, levels.map(function (level) {
+      return {
+        message: `Testing message for level: ${level}`,
+        index: i,
+        level
+      };
+    }));
+  }
+
+  return infos;
+};
+
+//
 // Helper function for generating a set of messages
 // one per level.
 //
@@ -22,6 +43,30 @@ exports.levelAndMessage = function levelAndMessage (level) {
   return {
     message: `Testing message for level: ${level}`,
     level
+  };
+};
+
+//
+// Adds the { exception: true } to the info created
+// (or passed in) with the target `level`.
+//
+exports.toException = function toException(level) {
+  const info = typeof level === 'string'
+    ? exports.levelAndMessage(level)
+    : level;
+
+  info.exception = true;
+  return info;
+};
+
+//
+// Transforms into a _mock_ internal Node.js WriteReq.
+//
+exports.toWriteReq = function (obj) {
+  return {
+    chunk: obj,
+    enc: 'utf8',
+    callback: function () {}
   };
 };
 
