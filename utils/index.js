@@ -6,7 +6,7 @@ exports.logFor = function logFor(count, done) {
   const infos = [];
   return function log(info, next) {
     infos.push(info);
-    next();
+    if (next) { next(); }
     if (!--count) { return done && done(null, infos); }
     if (count < 0) {
       throw new Error('Invoked more log messages than requested');
