@@ -1,3 +1,7 @@
+'use strict';
+
+const LEVEL = Symbol.for('level');
+
 //
 // Returns a function which logs a specified amount
 // of times before calling the provided callback
@@ -25,6 +29,7 @@ exports.infosFor = function infosFor(opts) {
   for (var i = 0; i < count; i++) {
     infos.push.apply(infos, levels.map(function (level) {
       return {
+        [LEVEL]: level,
         message: `Testing message for level: ${level}`,
         index: i,
         level
@@ -41,6 +46,7 @@ exports.infosFor = function infosFor(opts) {
 //
 exports.levelAndMessage = function levelAndMessage (level) {
   return {
+    [LEVEL]: level,
     message: `Testing message for level: ${level}`,
     level
   };
@@ -56,6 +62,10 @@ exports.toException = function toException(level) {
     : level;
 
   info.exception = true;
+  if (!info[LEVEL]) {
+    info[LEVEL] = info.level;
+  }
+
   return info;
 };
 
