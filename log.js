@@ -1,4 +1,5 @@
-var assert = require('assert');
+const assert = require('assert');
+const MESSAGE = Symbol.for('message');
 
 module.exports = function (options) {
   options = options || {};
@@ -29,7 +30,7 @@ module.exports = function (options) {
         message: 'foo'
       };
 
-      info.raw = JSON.stringify(info);
+      info[MESSAGE] = JSON.stringify(info);
       var result = instance.log(info);
       assert(true, result);
     });
@@ -40,7 +41,7 @@ module.exports = function (options) {
         message: 'foo'
       };
 
-      info.raw = JSON.stringify(info);
+      info[MESSAGE] = JSON.stringify(info);
       var result = instance.log(info, function () {
         assert(true, result);
         done();
@@ -57,7 +58,7 @@ module.exports = function (options) {
         message: 'foo'
       };
 
-      info.raw = JSON.stringify(info);
+      info[MESSAGE] = JSON.stringify(info);
       instance.log(info);
     });
   });
