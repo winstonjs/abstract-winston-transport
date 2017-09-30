@@ -1,6 +1,6 @@
 {
   "name": "abstract-winston-transport",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "An abstract test suite for winston inspired by abstract-blob-store",
   "main": "index.js",
   "repository": {

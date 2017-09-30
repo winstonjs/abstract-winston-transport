@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### 0.5.0
+##### 2017/09/30
+
+- Accept `after` and `afterEach` in `options`.
+
 ### 0.4.0
 ##### 2017/09/30
 
