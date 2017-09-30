@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### 0.4.0
+##### 2017/09/30
+
+- Migrate support to `info[MESSAGE]`.
+
 ### 0.3.0
 ##### 2017/09/29
 
