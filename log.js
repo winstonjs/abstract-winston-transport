@@ -62,4 +62,20 @@ module.exports = function (options) {
       instance.log(info);
     });
   });
+
+  afterEach(function (done) {
+    if (options.afterEach) {
+      return options.afterEach(options, done);
+    }
+
+    done();
+  });
+
+  after(function (done) {
+    if (options.afterEach) {
+      return options.afterEach(options, done);
+    }
+
+    done();
+  });
 };
