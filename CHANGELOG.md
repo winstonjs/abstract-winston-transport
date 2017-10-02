@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### 0.5.1
+##### 2017/10/01
+
+-  Allow for `info` messages to be emitted from `logged` events.
+
 ### 0.5.0
 ##### 2017/09/30
 
