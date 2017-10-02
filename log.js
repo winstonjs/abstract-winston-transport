@@ -51,7 +51,9 @@ module.exports = function (options) {
 
   describe('events', function () {
     it('should emit the "logged" event', function (done) {
-      instance.once('logged', done);
+      instance.once('logged', function (info) {
+        done()
+      });
 
       var info = {
         level: 'debug',
